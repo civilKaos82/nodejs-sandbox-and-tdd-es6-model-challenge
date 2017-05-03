@@ -67,7 +67,7 @@ the tests what they need to fail in a more meaningful way.
   over and over (it is certainly happening in `tweet-test.js`), can you find a
   way to optimize this?
   
-  ## Conclusion
+## Conclusion
 
 This is amazing! In one day you've learned a new language (node) that will help
 you learn a new language (ES6) by virtue of tests. You're using your own
