@@ -49,7 +49,13 @@ the tests.
 
 OK, you've bootstrapped your sandbox now. Implement a `Tweet` class such that
 you can get those tests passing. Remember you may need to use `require` to give
-the tests what they need to fail in a more meaningful way.
+the tests access to your `Tweet` class.
+
+Also, remember, the subtle differences between languages often trip up developers
+In Node, using `require` to read in a file **does not mean that you get its contents
+imported into the `require`-ing code** the `require`d file must **explicitly
+export its content** using `module.exports`. Follow Karl Seguin's [explanation][medoc]
+and ask for help if you need it!
 
 ### Stretch Opportunities:
 
@@ -66,6 +72,11 @@ the tests what they need to fail in a more meaningful way.
   refactoring your tests. Do you find yourself instantiating the same variable
   over and over (it is certainly happening in `tweet-test.js`), can you find a
   way to optimize this?
+* Here we point to Karl Seguin's explanation of `module.exports` look at "official"
+  documentation at `nodejs.org`. Is there anything that explains this mechanism
+  similarly well? How might you suggest the documentation be improved? Consider
+  opening a pull request on Node's docs to improve the content. It's a resume
+  visibility-raiser for sure!
   
 ## Conclusion
 
@@ -78,3 +89,4 @@ getting smarter with no known base-case for exit :)
 [mocha]: https://mochajs.org
 [assert]: https://nodejs.org/api/assert.html
 [gitignore]: https://git-scm.com/docs/gitignore
+[medoc]: http://openmymind.net/2012/2/3/Node-Require-and-Exports/
